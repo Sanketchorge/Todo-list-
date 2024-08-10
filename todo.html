@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add</h1>
+<ul>
+
+</ul>
+
+<button onclick="addTodo()">Add Todo</button>
+
+
+<script>
+// function addTodo(){
+//     var todo = window.prompt("Enter the Todo");
+//     var li = document.createElement("li");
+//     li.innerHTML = todo;
+//     document.querySelector("ul").appendChild(li);
+// }
+
+var todos = [];
+
+function addTodo(){
+    var todo = window.prompt("Enter the Todo");
+    todos.push(todo);
+    console.log(todos)
+    showTodos();
+}
+
+function showTodos(){
+    document.querySelector("ul").innerHTML = "";
+    todos.forEach((val, i) => {
+        document.querySelector("ul").innerHTML +=  ` <li>${val} <button onclick="deleteTodo(${i})">Delete</button></li>`;
+        console.log(i);
+            
+    });
+}
+    function deleteTodo(i){
+        alert(i);
+        delete todos[i];
+        console.log(todos);
+        showTodos();
+    }
+
+    function showTodos(){
+    document.querySelector("ul").innerHTML=""
+    todos.forEach((val,i)=>{
+        document.querySelector("ul").innerHTML+=`<li>${val}<button onclick="removeElement(${i})">remove</button><button onclick="update(${i})">update</button></li>`
+    })
+}
+function removeElement(i){
+    delete todos[i];
+    showTodos();
+}
+function update(i){
+    let todo=prompt("enter todo for update")
+    todos[i]=todo
+    showTodos();
+
+}
+
+
+  
+
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

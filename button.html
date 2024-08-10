@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWO6CRT-7cTF_as-6iX_5XCkbLEXdmqKgOs9zKPrk-mAQRVFNGsU7DS90iTktqBRMPlvU&usqp=CAU" alt="" height="100px" width="100px" id="my-img">
+    </div>
+
+    <button onclick="loadJS()">JS</button>
+    <button onclick="loadReact()">REACT</button>
+    <button onclick="loadNode()">NODE</button>
+
+
+
+
+
+
+    <script>
+        function loadJS(){
+            document.querySelector('#my-img').src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWO6CRT-7cTF_as-6iX_5XCkbLEXdmqKgOs9zKPrk-mAQRVFNGsU7DS90iTktqBRMPlvU&usqp=CAU"
+        }
+
+        function loadReact(){
+            document.querySelector('#my-img').src="https://miro.medium.com/v2/resize:fit:1400/1*x0d41ns8PTQZz4a3VbMrBg.png"
+        }
+
+        function loadNode(){
+            document.querySelector('#my-img').src="https://logowik.com/content/uploads/images/nodejs.jpg"
+        }
+
+    </script>
+</body>
+</html>

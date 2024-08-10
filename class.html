@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+
+    <script>
+        class char {
+            constructor(name, speakPhrase, specialMode){
+                this._name = name;
+                this._speakPhrase = speakPhrase;
+                this._specialMode = specialMode;
+            }
+            speak(){
+                console.log(this._speakPhrase);
+            }
+
+            specialMode(){
+                console.log(this._specialMode + this._name);
+            }
+        }
+
+        var game = true;
+        var chars =[];
+        while(game){
+            var choice = parseInt(window.prompt("select any one option from following :\n 1) Add \n 2) show char\n 3) Exit"));
+
+        switch(choice){
+            case 1 :
+                var count = parseInt(window.prompt("Enetr the number of chars"));
+                for (var i=1; i<=count; i++){
+                    var name = window.prompt("Enter the name of char");
+                    var speakPhrase = window.prompt("Enter the speak phrase for char");
+                    var specialMode = window.prompt("Enter special mode for char");
+
+                    var c1 = new char(name,speakPhrase,specialMode);
+                    chars.push(c1);
+                }
+                break;
+
+                case 2 : 
+                if(!chars.length > 0){
+                    alert("Please add char first")
+                } else{
+                    var num = window.prompt("Enter the number of char");
+                    document.querySelector("#result").innerHTML = chars[num]._name;
+                    game = false;
+                }
+                break;
+
+                case 3 : 
+                game = fa
+                lse;
+                break;
+
+                default:
+                    alert("Invalid Choice");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
